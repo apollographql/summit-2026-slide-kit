@@ -2,9 +2,9 @@
 
 Everything a Summit speaker needs to build an on-brand deck **with an AI assistant** instead of by hand in Google Slides.
 
-Speakers get a Google Slides template in their enablement kit, and most will use it. This is for the ones who would rather describe their talk to Claude, ChatGPT or Cursor and have it generate the slides — as HTML, as a PDF, or as anything else. Hand the model [`SLIDE-DESIGN-SYSTEM.md`](SLIDE-DESIGN-SYSTEM.md) together with your talk outline and it has everything it needs. No other file is required.
+Speakers get a Google Slides template in their enablement kit, and most will use it. This is for the ones who would rather describe their talk to Claude, ChatGPT or Cursor and have it generate the slides — as HTML, as a PDF, or as anything else. Hand the model [`SLIDE-DESIGN-SYSTEM.md`](SLIDE-DESIGN-SYSTEM.md) together with your talk outline. That file carries the rules. For the exact geometry of a given slide type, point it at `example/deck.src.html` as well, where every archetype is built. Coding agents should start at [`AGENTS.md`](AGENTS.md).
 
-> **Status: proposed, pending design review.** Every number in the guide was measured from the official 2026 speaker template, but five open questions are flagged `[CONFIRM]` at the bottom of the guide and still need a decision from design.
+> **Status: proposed, pending design review.** Every number in the guide was measured from the official 2026 speaker template. One open question remains, on whether the deck should end with a closing slide, and it is recorded at the bottom of the guide.
 
 ---
 
@@ -12,8 +12,9 @@ Speakers get a Google Slides template in their enablement kit, and most will use
 
 | Path | What it is |
 |---|---|
-| [`SLIDE-DESIGN-SYSTEM.md`](SLIDE-DESIGN-SYSTEM.md) | **The one file that matters.** Canvas, grid, palette, type ramp, slide archetypes, halftone rules, writing rules, and a pre-flight checklist. Self-contained. |
-| `example/deck.src.html` | A worked 23-slide example exercising every archetype: title, agenda, section dividers, statement, quote, card rows, stat rows, arrow list, split code panel, diagrams, takeaways, resources. |
+| [`AGENTS.md`](AGENTS.md) | **Start here if you are a coding agent.** What to read, hard constraints, build steps, and the rules generated decks usually break. |
+| [`SLIDE-DESIGN-SYSTEM.md`](SLIDE-DESIGN-SYSTEM.md) | **The specification.** Canvas, grid, palette, type ramp, slide archetypes, halftone rules, writing rules, and a pre-flight checklist. |
+| `example/deck.src.html` | **The reference implementation.** A worked 23-slide example exercising every archetype: title, agenda, section dividers, statement, quote, card rows, stat rows, arrow list, split code panel, diagrams, takeaways, resources. |
 | `example/deck.html` | The same file with artwork and logos inlined, ready to open or print. |
 | `art/halftone.py` | Generates the halftone artwork as SVG. See below. |
 | `art/apollo-logo.svg`, `art/summit-logo.svg` | The two wordmarks used in the lockup. |

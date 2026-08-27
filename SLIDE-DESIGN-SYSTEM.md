@@ -294,7 +294,7 @@ Four words: **direct, confident, curious, grounded.**
 - [ ] The lockup is bottom left on every content slide, full opacity. No page numbers.
 - [ ] One accent leads each slide. Card rows rotate orange, cyan, bone, yellow.
 - [ ] Any text on an accent fill is black.
-- [ ] Body is 14 pt or larger. Nothing is clipped.
+- [ ] Body is 16 pt or larger. Nothing is clipped.
 - [ ] Code is Fira Code 10 to 12 pt, VS Code Dark+, under 20 lines.
 - [ ] Sentence case. No emoji. No page numbers. No new shapes.
 - [ ] Read the smallest text on the smallest screen you own.
