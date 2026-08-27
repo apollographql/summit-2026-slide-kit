@@ -1,0 +1,6 @@
+# rendered previews - regenerate with build.py + chrome
+example/*.jpg
+example/*.png
+example/deck.pdf
+__pycache__/
+.DS_Store
