@@ -2,7 +2,7 @@
 
 **For speakers building slides with an AI assistant.** Paste this file into Claude, ChatGPT or Cursor together with your talk outline, and it has everything it needs to build an on-brand deck. No other file is required.
 
-Every number below was measured from the official 2026 speaker template (`PRIMARY - [Apollo Summit] 2026 Speaker Slide Template [MAKE A COPY]`). Where the template has an opinion, it wins. Items marked **[CONFIRM]** are places the template is silent or inconsistent and a designer decision is still needed.
+Every number below was measured from the official 2026 speaker template (`PRIMARY - [Apollo Summit] 2026 Speaker Slide Template [MAKE A COPY]`). Where the template has an opinion, it wins. Two open design questions are listed at the end; everything else is settled.
 
 > **What changed from v1.** v1 was the website design system with a four line slide footnote. Its orange, its teal, its font weights and its footer rule all disagreed with the actual template. Corrections are noted inline as *was:*.
 
@@ -115,7 +115,7 @@ Every type color in the palette passes. Keep it that way: do not introduce opaci
 - **Fira Code 400** is the deck's small caps: eyebrows, section tags, role lines, agenda numerals, captions and all code.
 - **Georgia 700** appears once, as the oversized quote mark on a quote slide. Nowhere else.
 
-*was: v1 specified Aeonik substituted with Inter, at Medium 500, "never bold." The template contains no 500 at all. It is 400 and 700 only, and 700 is used deliberately.* **[CONFIRM]** *whether 700 is intended or an artifact of building in Google Slides.*
+*was: v1 specified Aeonik substituted with Inter, at Medium 500, "never bold." The template contains no 500 at all. It is 400 and 700 only, and 700 is used deliberately across six distinct roles — see Open questions.*
 
 **There is no letter spacing.** Google Slides has no such property, so the template applies none. If you build in HTML you may apply `-0.02em` to type above 36 pt, but it is optional and not part of the spec.
 
@@ -185,7 +185,7 @@ The template ships 31 reusable pages. **Duplicate the page you want and replace 
 | **Things to remember** | Numbered takeaways, numerals in Fira Code orange. |
 | **Resources** | Docs, repo, example, contact. This is the closing slide. |
 
-**There is no thank you or Q&A slide.** The resources page ends the deck. **[CONFIRM]** whether a closing slide should be added, given there is no formal Q&A in 2026.
+**There is no thank you or Q&A slide.** The resources page ends the deck. The 2025 template did carry a standard outro slide; this one dropped it. Still an open design question — see Open questions.
 
 ### Anatomy of a content slide
 
@@ -301,10 +301,30 @@ Four words: **direct, confident, curious, grounded.**
 
 ---
 
-## Open questions for the designer
+## Open questions
 
-1. **[CONFIRM] Inter 700.** Intended, or an artifact? v1 said Medium 500 never bold. The template has no 500 and uses 700 on card headings, speaker names and stat labels.
-2. **[CONFIRM] The accent rule.** v1 said one accent per composition, never stacked. The template rotates up to four across a card row. Confirm the rotation is house style.
-3. **[CONFIRM] A closing slide.** The deck ends on Resources. With no formal Q&A in 2026, is a thank you or contact slide wanted?
-4. **[CONFIRM] Yellow `#FFD900`.** Absent from v1, used throughout the template. Is it a full peer of orange and cyan, or reserved for card rotations and diagrams?
-5. **[CONFIRM] Bone versus white.** The template uses `#F5F5F0` and `#FFFFFF` interchangeably for type. Is there a rule, or is either fine?
+Four of the original five were settled by measuring the template itself. The evidence is recorded here so nobody re-litigates them.
+
+### Resolved from the template
+
+**Inter 700 is intentional.** There is no Inter 500 anywhere in the 40 slides, and 700 appears in six role-consistent clusters, not as scatter: card headings (13 pt), speaker names (14 pt and 10 pt), stat labels (11 pt), diagram box labels (8 pt), and inline proof stats (24 pt). Each cluster is one role at one size in one colour. v1's "Medium 500, never bold" does not describe this template. **Use 400 and 700.**
+
+**The accent rotation is a fixed sequence.** Every card row in the template runs the same order, truncated to the column count:
+
+| Columns | Rule colours, left to right |
+|---|---|
+| 2 | orange, cyan |
+| 3 | orange, cyan, bone |
+| 4 | orange, cyan, bone, yellow |
+
+That is a rule, not drift. **Follow the sequence.**
+
+**Yellow is structural, never type.** Across all 40 slides there are **zero** text runs in `#FFD900`. It appears only as a card top rule, a diagram box outline, and a timeline stem. **Never set type in yellow** — including mono eyebrows and chart labels.
+
+**White is the default; bone is a soft alternate.** White carries 172 runs against bone's 30. White does the work at every size: body, slide titles, card headings, speaker names. Bone clusters on section titles (24 pt), stat labels (11 pt) and diagram micro-labels (8 pt). They overlap and are close enough to be interchangeable in practice. **Default to white**; bone is fine on large section titles and small labels.
+
+### Still open
+
+1. **A closing slide.** The template ends on Resources with no thank-you or Q&A page. The **2025** template did carry one, with the speaker note *"Standard Outtro slide, please end your deck with this slide."* Since 2026 has no formal per-session Q&A and instead sends the audience to the stage front or the Apollo lounge, the last slide is what stays on screen while people decide whether to come and talk. That argues for adding one back rather than dropping it. The example deck merges the closing statement and resources onto one page as a stopgap. **Design decision needed.**
+
+2. **The 18 pt body size.** This kit deliberately departs from the template's 14 pt (see §4). The call was made on room legibility. **Worth a designer sign-off**, and if it stands, worth pushing back into the Slides template so both paths agree.
