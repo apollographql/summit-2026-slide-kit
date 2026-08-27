@@ -35,17 +35,24 @@ The page is built at 1920×1080 with everything sized in `em` off a single root,
 
 ## The halftone
 
-The decorative language of Summit 2026 is **printed halftone**: a dot grid whose radius ramps across the shape, under a two-stop accent gradient. Squares, circles, quarter-rounds, and a full-bleed band.
+The decorative language of Summit 2026 is **printed halftone**: a rotated two-colour dot screen, used as squares, circles, quarter-rounds and a full-bleed band.
 
-The real artwork ships as ~30 MB of PNGs in the Slides template, which is impractical to embed in an HTML deck. `art/halftone.py` generates the same shapes as SVG instead — a few hundred circles, ~240 KB, resolution-independent:
+`art/` holds the **real artwork**, extracted from the official Google Slides template and resized to the dimensions the slides actually use. The template ships these as ~36 MB of PNGs at up to 2048 px; this kit carries the same art at ~1.4 MB by cropping to the used region and sizing each file to roughly 1.4× its on-slide size. Opaque pieces are JPEG, anything needing transparency stays PNG.
 
-```bash
-cd art && python3 halftone.py     # writes halftone.svg
-```
+| File | What it is |
+|---|---|
+| `lockup.png` | Apollo Summit stacked lockup, used on every slide |
+| `trio.png` | The three-shape trio on the title slide |
+| `portrait-bg.jpg` | Cyan-to-yellow halftone backdrop for the speaker headshot |
+| `strip.jpg` | Full-bleed band across the top of an agenda slide |
+| `bar-cyan.jpg`, `bar-orange.jpg` | Left-edge accent bar on a statement slide |
+| `circle-grey.png` | Grey halftone circle, and the dome cresting a quote slide |
+| `edge-stack.png` | The three shapes down the right edge of a section divider |
+| `cluster-a.png`, `cluster-b.png` | Corner clusters for takeaways and closing slides |
 
-Symbols it defines: `ht-sq-oy` (orange→yellow square), `ht-sq-cy` (cyan square), `ht-sq-cyy` (cyan→yellow, the portrait backdrop), `ht-circ` (grey circle), `ht-qtr` (orange quarter-round), `ht-strip` (full-bleed band), `ht-tex` (faint page texture).
+`build.py` inlines all of it as data URIs, so the built `deck.html` is a single self-contained file you can open, host, or hand to anyone.
 
-Tune dot pitch and radius ramp at the call sites in `halftone.py` if you need a different density.
+**`art/halftone.py` is a fallback**, not the main path. It generates approximate halftone shapes as SVG (~240 KB, resolution-independent) for cases where shipping raster art isn't practical. It is a decent imitation, but the real screen is a rotated two-colour print pattern and the difference shows side by side. Prefer the real files.
 
 ## About the example
 

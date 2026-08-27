@@ -37,48 +37,46 @@ h2{font-size:4em;font-weight:400;line-height:1.1;letter-spacing:-.01em}         
 .talktitle{font-size:6em;font-weight:400;line-height:1.1;letter-spacing:-.015em} /* 36pt */
 .sectitle{font-size:6.8125em;font-weight:400;line-height:1.05;letter-spacing:-.015em} /* 41pt */
 .statement{font-size:5em;font-weight:400;line-height:1.28;letter-spacing:-.01em} /* 30pt */
-p{font-size:2.3125em;line-height:1.45;font-weight:400}                            /* 14pt */
+p{font-size:3em;line-height:1.4;font-weight:400}                            /* 14pt */
 .sub{font-size:3em;color:var(--muted);line-height:1.35}                           /* 18pt */
-.eyebrow{font-family:var(--mono);font-size:1.6875em;text-transform:uppercase;color:var(--orange)}
+.eyebrow{font-family:var(--mono);font-size:1.833em;text-transform:uppercase;color:var(--orange)}
 .eyebrow.cy{color:var(--cyan)} .eyebrow.mu{color:var(--muted)}
-.cap{font-size:1.5em;color:var(--muted)}                                          /* 9pt */
+.cap{font-size:1.667em;color:var(--muted)}                                          /* 9pt */
 
 .body{margin-top:4.5em;flex:1;display:flex;flex-direction:column;min-height:0}    /* content top 1.38in */
 
 /* ---- the lockup: APOLLO over SUMMIT, bottom-left, full opacity ---- */
-.lock{position:absolute;left:2.9375em;top:63em;width:6.75em;color:var(--bone);
-      display:flex;flex-direction:column;align-items:flex-start;gap:.2em;z-index:5}
-.lock svg{display:block;height:auto}
-.lock .ap{width:56%} .lock .su{width:100%}
-.lock.big{left:6em;top:6em;width:12.5em;gap:.35em}
+.lock{position:absolute;left:2.9375em;top:63em;width:6.75em;aspect-ratio:358/124;z-index:5;
+      background:url("__LOCKUP__") left center/contain no-repeat}
+.lock.big{left:6em;top:6em;width:12.5em}
 
 /* ---- cards: 2.25pt accent rule, heading, body, caption pinned bottom ---- */
 .row{display:flex;gap:1.4375em;align-items:stretch}
 .row>*{flex:1}
 .card{border-top:6px solid var(--bone);padding-top:1.5em;display:flex;flex-direction:column}
 .card.o{border-top-color:var(--orange)} .card.c{border-top-color:var(--cyan)} .card.y{border-top-color:var(--yellow)}
-.card h3{font-size:2.1875em;font-weight:700;line-height:1.25}                     /* 13pt bold */
-.card p{font-size:1.6875em;line-height:1.45;color:var(--white);margin-top:1.1em}  /* 10pt */
+.card h3{font-size:2.333em;font-weight:700;line-height:1.25}                     /* 13pt bold */
+.card p{font-size:2em;line-height:1.4;color:var(--white);margin-top:1.1em}  /* 10pt */
 .card .cap{margin-top:auto;padding-top:1.6em}
 .row.fill .card{min-height:26em}
 .card .v{font-size:7.3125em;font-weight:400;line-height:1;letter-spacing:-.02em}  /* 44pt */
 .card .v.sm{font-size:4.8125em}                                                   /* 29pt */
 .card.o .v{color:var(--orange)} .card.c .v{color:var(--cyan)} .card.y .v{color:var(--yellow)}
-.card .k{font-size:1.8125em;font-weight:700;color:var(--bone);margin-top:.85em;display:block}
+.card .k{font-size:2em;font-weight:700;color:var(--bone);margin-top:.85em;display:block}
 
 /* ---- lists ---- */
-.agenda{display:flex;flex-direction:column;max-width:44em}
+.agenda{display:flex;flex-direction:column;max-width:64em}
 .agenda .r{display:flex;gap:2.2em;align-items:baseline;padding:1.15em 0;border-bottom:1px solid var(--rule)}
-.agenda .n{font-family:var(--mono);font-size:1.6875em;color:var(--orange);width:2.5em;flex:none}
-.agenda .t{font-size:2.3125em}
-.arrows{display:flex;flex-direction:column;gap:1.5em;max-width:52em}
-.arrows .r{display:flex;gap:1em;font-size:2.3125em;line-height:1.4}
+.agenda .n{font-family:var(--mono);font-size:1.833em;color:var(--orange);width:2.5em;flex:none}
+.agenda .t{font-size:3em}
+.arrows{display:flex;flex-direction:column;gap:1.5em;max-width:76em}
+.arrows .r{display:flex;gap:1em;font-size:3em;line-height:1.4}
 .arrows .a{color:var(--orange);flex:none}
-.nums{display:flex;flex-direction:column;gap:1.35em;max-width:50em}
+.nums{display:flex;flex-direction:column;gap:1.15em;max-width:72em}
 .nums .r{display:flex;gap:2.2em;align-items:baseline}
-.nums .n{font-family:var(--mono);font-size:1.6875em;color:var(--orange);width:2.5em;flex:none}
-.nums .t{font-size:2.3125em;line-height:1.35}
-.nums .d{font-size:1.6875em;color:var(--muted);margin-top:.3em;line-height:1.4}
+.nums .n{font-family:var(--mono);font-size:1.833em;color:var(--orange);width:2.5em;flex:none}
+.nums .t{font-size:3em;line-height:1.35}
+.nums .d{font-size:2em;color:var(--muted);margin-top:.3em;line-height:1.4}
 
 /* ---- code ---- */
 .codepanel{position:absolute;right:0;top:0;width:50%;height:100%;
@@ -93,38 +91,27 @@ pre{font-family:var(--mono);font-size:1.75em;line-height:1.6;color:var(--c-plain
 .tex{position:absolute;inset:0;
      background-image:radial-gradient(circle,rgba(255,255,255,.05) 1.1px,transparent 1.2px);
      background-size:14px 14px}
-.trio{display:flex;gap:.75em;align-items:center}
-.trio>*{width:3.1em;height:3.1em;display:block}
 
 @page{size:1920px 1080px;margin:0}
 @media print{body{padding:0;background:#000}.deck{gap:0}
   .slide{font-size:16px;width:1920px;height:1080px;aspect-ratio:auto;break-after:page}}
 </style>
 
-__HALFTONE__
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <symbol id="lockup" viewBox="0 0 416 75">__SUMMIT_PATHS__</symbol>
-  <symbol id="apollo" viewBox="0 0 127 44">__APOLLO_PATHS__</symbol>
-</defs></svg>
 
 <div class="deck">
 
 <!-- 01 TITLE ============================================================ -->
 <section class="slide" style="padding:0">
-  <div class="lock big"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock big" role="img" aria-label="Apollo Summit"></div>
   <div style="display:flex;height:100%">
     <div style="flex:1;padding:6em;display:flex;flex-direction:column;justify-content:center">
       <div class="talktitle">Governance as a feature</div>
       <div class="sub" style="margin-top:.7em">How Northstar scaled a federated graph 18x without slowing down</div>
-      <div class="trio" style="margin-top:3.2em">
-        <svg viewBox="0 0 200 200"><path d="M200 0 L200 200 L0 200 A200 200 0 0 1 200 0 Z" fill="#FF7B3C"/></svg>
-        <svg viewBox="0 0 200 200"><use href="#ht-sq-cy"/></svg>
-        <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="#8A8A8A"/></svg>
-      </div>
+      <img src="__TRIO__" alt="" style="margin-top:3.2em;width:9.4em;height:auto;display:block">
     </div>
     <div style="width:37%;border-left:1px solid var(--rule);padding:6em 6em 6em 4em;display:flex;flex-direction:column;justify-content:center">
       <div style="width:100%;aspect-ratio:1;background:#1F1F1F;overflow:hidden;position:relative">
-        <svg viewBox="0 0 200 200" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><use href="#ht-sq-cyy"/></svg>
+        <img src="__PBG__" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
         <div style="position:absolute;inset:12%;background:#1F1F1F;border:2px solid #444444;display:flex;align-items:center;justify-content:center;font-family:'Fira Code',monospace;font-size:1.5em;color:#999999;letter-spacing:.14em">PORTRAIT</div>
       </div>
       <div style="margin-top:2.2em;font-size:2.3125em;font-weight:700">Alex Rivera</div>
@@ -136,7 +123,7 @@ __HALFTONE__
 
 <!-- 02 AGENDA =========================================================== -->
 <section class="slide" style="padding-top:0">
-  <svg class="art" viewBox="0 0 1200 60" preserveAspectRatio="none" style="left:0;top:0;width:100%;height:3.6em"><use href="#ht-strip"/></svg>
+  <img class="art" src="__STRIP__" alt="" style="left:0;top:0;width:100%;height:3.6em;object-fit:cover">
   <div style="padding-top:8em"><h2>Agenda</h2></div>
   <div class="body" style="margin-top:2.5em">
     <div class="agenda">
@@ -147,7 +134,7 @@ __HALFTONE__
       <div class="r"><div class="n">05</div><div class="t">What it cost, and what it bought</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 03 THE FORECAST ===================================================== -->
@@ -165,54 +152,52 @@ __HALFTONE__
         <div class="cap">Three reviewers</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 04 STATEMENT ======================================================== -->
 <section class="slide" style="padding:0">
   <div style="display:flex;align-items:center;height:100%">
-    <svg viewBox="0 0 200 200" preserveAspectRatio="none" style="width:6.75em;height:12em;flex:none"><use href="#ht-sq-cy"/></svg>
+    <img src="__BARCYAN__" alt="" style="width:6.75em;height:12em;flex:none;object-fit:cover">
     <div class="statement" style="padding:0 6em;max-width:42em">That wasn't a scaling problem. It was a survival problem.</div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 05 SECTION 01 ======================================================= -->
 <section class="slide">
   <div class="tex"></div>
-  <svg class="art" viewBox="0 0 200 200" style="right:0;top:0;width:13em;height:13em"><use href="#ht-sq-oy"/></svg>
-  <svg class="art" viewBox="0 0 200 200" style="right:2.5em;top:15em;width:11em;height:11em"><use href="#ht-circ"/></svg>
-  <svg class="art" viewBox="0 0 200 200" preserveAspectRatio="none" style="right:0;bottom:0;width:15em;height:12em"><use href="#ht-sq-cy"/></svg>
+  <img class="art" src="__EDGE__" alt="" style="right:0;top:0;height:100%;width:auto">
   <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center">
     <div style="width:3.6em;height:3px;background:var(--orange)"></div>
     <div class="eyebrow" style="margin-top:1.5em">Part 01</div>
     <div class="sectitle" style="margin-top:.6em">Why GraphQL at all</div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 06 QUOTE ============================================================ -->
 <section class="slide" style="padding:0;align-items:center;justify-content:center">
-  <svg class="art" viewBox="0 0 200 200" style="left:50%;transform:translateX(-50%);bottom:-14em;width:26em;height:26em"><use href="#ht-circ"/></svg>
+  <img class="art" src="__CIRCLE__" alt="" style="left:50%;transform:translateX(-50%);bottom:-14em;width:26em;height:26em;object-fit:contain">
   <div style="position:relative;text-align:center;padding:0 14em;margin-top:-3em">
     <div style="font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:10em;line-height:.7;color:var(--orange)">&ldquo;</div>
     <div class="statement" style="margin-top:.45em">Why do I have to make so many API calls just to get one answer?</div>
     <div style="margin-top:2.2em;font-size:2.3125em;font-weight:700">Northstar customers</div>
     <div class="cap" style="margin-top:.7em;line-height:1.6">Managed service providers<br>IT professionals</div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 07 STATEMENT (orange) =============================================== -->
 <section class="slide" style="padding:0">
   <div style="display:flex;align-items:center;height:100%">
-    <svg viewBox="0 0 200 200" preserveAspectRatio="none" style="width:6.75em;height:12em;flex:none"><use href="#ht-sq-oy"/></svg>
+    <img src="__BARORANGE__" alt="" style="width:6.75em;height:12em;flex:none;object-fit:cover">
     <div style="padding:0 6em;max-width:72em">
       <div class="statement">Customers asked for more REST endpoints. Leadership said no more REST.</div>
       <div class="cap" style="margin-top:2em;font-size:1.6875em">It surprised the customers who asked.</div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 08 THE VISION ======================================================= -->
@@ -231,7 +216,7 @@ __HALFTONE__
         <div class="cap">The promise to customers</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 09 ARCHITECTURE ===================================================== -->
@@ -260,21 +245,19 @@ __HALFTONE__
       <text x="860" y="292" font-family="Fira Code, monospace" font-size="23" fill="#FF7B3C" text-anchor="middle">18 SUBGRAPHS</text>
     </svg>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 10 SECTION 02 ======================================================= -->
 <section class="slide">
   <div class="tex"></div>
-  <svg class="art" viewBox="0 0 200 200" preserveAspectRatio="none" style="right:0;top:0;width:15em;height:11em"><use href="#ht-sq-cy"/></svg>
-  <svg class="art" viewBox="0 0 200 200" style="right:3em;top:14em;width:12em;height:12em"><use href="#ht-circ"/></svg>
-  <svg class="art" viewBox="0 0 200 200" style="right:0;bottom:0;width:13em;height:13em"><use href="#ht-sq-oy"/></svg>
+  <img class="art" src="__EDGE__" alt="" style="right:0;top:0;height:100%;width:auto">
   <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center">
     <div style="width:3.6em;height:3px;background:var(--cyan)"></div>
     <div class="eyebrow cy" style="margin-top:1.5em">Part 03</div>
     <div class="sectitle" style="margin-top:.6em">Education as<br>infrastructure</div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 11 THE RULE ========================================================= -->
@@ -292,7 +275,7 @@ __HALFTONE__
         <div class="cap">Entities, resolvers, composition</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 12 CERT RESULTS ===================================================== -->
@@ -308,21 +291,19 @@ __HALFTONE__
         <div class="cap">Covering all eighteen subgraphs</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 13 SECTION 03 ======================================================= -->
 <section class="slide">
   <div class="tex"></div>
-  <svg class="art" viewBox="0 0 200 200" style="right:0;top:0;width:13em;height:13em"><use href="#ht-qtr"/></svg>
-  <svg class="art" viewBox="0 0 200 200" style="right:4em;bottom:9em;width:10em;height:10em"><use href="#ht-circ"/></svg>
-  <svg class="art" viewBox="0 0 200 200" preserveAspectRatio="none" style="right:0;bottom:0;width:14em;height:9em"><use href="#ht-sq-cy"/></svg>
+  <img class="art" src="__EDGE__" alt="" style="right:0;top:0;height:100%;width:auto">
   <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center">
     <div style="width:3.6em;height:3px;background:var(--yellow)"></div>
     <div class="eyebrow" style="color:var(--yellow);margin-top:1.5em">Part 04</div>
     <div class="sectitle" style="margin-top:.6em">Breaking the rules</div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 14 APOLLO'S WAY / OURS ============================================== -->
@@ -337,12 +318,12 @@ __HALFTONE__
       <div class="card o"><h3>Northstar does</h3>
         <p style="font-size:2.3125em;margin-top:.9em">Propose against production, then check</p>
         <p style="color:var(--muted)">Approval before development starts. Automated checks carry the rest.</p>
-        <div class="cap">Cost: two to three reviewers</div></div>
+        <div class="cap">Cost: three reviewers</div></div>
     </div>
     <div style="flex:1"></div>
     <p style="color:var(--muted)">With 186 certified engineers, the bottleneck was never their knowledge. It was the process.</p>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 15 WORKFLOW ========================================================= -->
@@ -372,7 +353,7 @@ __HALFTONE__
       <text x="1044" y="284" font-family="Fira Code, monospace" font-size="21" fill="#999999" text-anchor="middle">FAIL · BACK TO DEVELOPMENT</text>
     </svg>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 16 PIPELINE ========================================================= -->
@@ -394,7 +375,7 @@ __HALFTONE__
         <div class="cap">Continuous integration for the graph</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 17 THREE CHOICES ==================================================== -->
@@ -407,7 +388,7 @@ __HALFTONE__
       <div class="r"><div class="a">&rarr;</div><div>Always check against production, whatever variant the developer is working on.</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 18 TODAY ============================================================ -->
@@ -429,11 +410,11 @@ __HALFTONE__
   <div style="width:50%">
     <h2>One hundred robots, one hundred calls.</h2>
     <div class="body">
-      <p style="color:var(--muted);max-width:19em">Most customers do this in PowerShell: manual orchestration, their own error handling, filtering on the client.</p>
+      <p style="color:var(--muted);max-width:15em">Most customers do this in PowerShell: manual orchestration, their own error handling, filtering on the client.</p>
       <p style="margin-top:1.4em;color:var(--orange);font-weight:700">Real fleets run to 50,000 robots.</p>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 19 TOMORROW ========================================================= -->
@@ -445,8 +426,8 @@ __HALFTONE__
     <span class="fld">nodes</span> {
       <span class="fld">id</span>
       <span class="fld">name</span>
-      ... <span class="key">on</span> <span class="typ">TelemetryBooleanReading</span> { <span class="fld">value</span> }
-      ... <span class="key">on</span> <span class="typ">TelemetryStringReading</span> { <span class="fld">value</span> }
+      ... <span class="key">on</span> <span class="typ">BooleanReading</span> { <span class="fld">value</span> }
+      ... <span class="key">on</span> <span class="typ">StringReading</span> { <span class="fld">value</span> }
       <span class="fld">site</span> { <span class="fld">name</span> }
       <span class="fld">customer</span> { <span class="fld">name</span> }
     }
@@ -457,12 +438,12 @@ __HALFTONE__
   <div style="width:50%">
     <h2>One query.</h2>
     <div class="body">
-      <p style="color:var(--muted);max-width:19em">No loops. No orchestration. Filtering lives in the operation, and the response carries exactly the fields asked for.</p>
+      <p style="color:var(--muted);max-width:15em">No loops. No orchestration. Filtering lives in the operation, and the response carries exactly the fields asked for.</p>
       <p style="margin-top:1.4em;color:var(--orange);font-weight:700">100+ REST calls become one.</p>
       <div class="cap" style="margin-top:1.6em">Planned for 2026 Q1</div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 20 GROWTH =========================================================== -->
@@ -494,7 +475,7 @@ __HALFTONE__
       </g>
     </svg>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 21 STILL HARD ======================================================= -->
@@ -513,16 +494,14 @@ __HALFTONE__
         <div class="cap">Next</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 22 THINGS TO REMEMBER =============================================== -->
 <section class="slide">
-  <svg class="art" viewBox="0 0 200 200" style="right:12.5em;bottom:5em;width:7em;height:7em"><circle cx="100" cy="100" r="100" fill="#EAF4F6"/></svg>
-  <svg class="art" viewBox="0 0 200 200" preserveAspectRatio="none" style="right:10.5em;bottom:0;width:8.5em;height:7em"><use href="#ht-qtr"/></svg>
-  <svg class="art" viewBox="0 0 200 200" preserveAspectRatio="none" style="right:0;bottom:0;width:11em;height:13em"><use href="#ht-sq-cy"/></svg>
+  <img class="art" src="__CLUSTERA__" alt="" style="right:0;bottom:0;width:22em;height:auto">
   <h2 style="position:relative">Things to remember.</h2>
-  <div class="body" style="position:relative;justify-content:center">
+  <div class="body" style="position:relative">
     <div class="nums">
       <div class="r"><div class="n">01</div><div><div class="t">Make certification mandatory from day one</div>
         <div class="d">Not optional, not recommended. Treat developer education like CI/CD.</div></div></div>
@@ -534,22 +513,21 @@ __HALFTONE__
         <div class="d">Build for success. One subgraph became eighteen.</div></div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 <!-- 23 CLOSE + RESOURCES ================================================ -->
 <section class="slide">
-  <svg class="art" viewBox="0 0 200 200" preserveAspectRatio="none" style="right:0;top:0;width:12em;height:9em"><use href="#ht-sq-oy"/></svg>
-  <svg class="art" viewBox="0 0 200 200" style="right:9em;top:6em;width:8em;height:8em"><use href="#ht-circ"/></svg>
+  <img class="art" src="__CLUSTERB__" alt="" style="right:0;top:0;width:17em;height:auto">
   <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;max-width:62em">
     <div class="statement" style="font-size:4.2em">We turned governance into competitive advantage.</div>
     <div class="statement" style="font-size:4.2em;color:var(--orange);margin-top:.8em">What's your competitive advantage?</div>
     <div class="arrows" style="margin-top:3.2em">
       <div class="r" style="font-size:1.9em"><div class="a">&rarr;</div><div>apollographql.com/tutorials</div></div>
-      <div class="r" style="font-size:1.9em"><div class="a">&rarr;</div><div>Alex Rivera &middot; Engineering Manager &middot; Northstar</div></div>
+      <div class="r" style="font-size:1.9em"><div class="a">&rarr;</div><div>Alex Rivera &middot; Staff Platform Engineer &middot; Northstar Robotics</div></div>
     </div>
   </div>
-  <div class="lock"><svg class="ap" viewBox="0 0 127 44"><use href="#apollo"/></svg><svg class="su" viewBox="0 0 416 75"><use href="#lockup"/></svg></div>
+  <div class="lock" role="img" aria-label="Apollo Summit"></div>
 </section>
 
 </div>

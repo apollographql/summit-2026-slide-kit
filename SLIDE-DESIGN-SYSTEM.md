@@ -135,17 +135,23 @@ Sizes in points are what you type into Google Slides. The percentage is of canva
 | **Slide title** | Inter 400 | **24** | 3.3% | 64 |
 | Image caption | Inter 400 | 21 | 2.9% | 56 |
 | Talk subtitle | Inter 400 | 18 | 2.5% | 48 |
-| **Body, list item** | Inter 400 | **14** | 1.9% | 37 |
-| Card heading | Inter **700** | 13 | 1.8% | 35 |
+| **Body, list item** | Inter 400 | **18** ⬆ | 2.5% | 48 |
 | Speaker name | Inter **700** | 14 | 1.9% | 37 |
-| Stat label | Inter **700** | 11 | 1.5% | 29 |
-| Card body | Inter 400 | 10 | 1.4% | 27 |
-| **Eyebrow, label** | **Fira Code** 400 | 9–10 | 1.3% | 24–27 |
+| Card heading | Inter **700** | 14 ⬆ | 1.9% | 37 |
+| Stat label | Inter **700** | 12 ⬆ | 1.7% | 32 |
+| Card body | Inter 400 | 12 ⬆ | 1.7% | 32 |
+| **Eyebrow, label** | **Fira Code** 400 | 11 ⬆ | 1.5% | 29 |
 | Speaker role | **Fira Code** 400 | 11 | 1.5% | 29 |
 | Code | **Fira Code** 400 | 10–12 | 1.4–1.7% | 27–32 |
-| Caption | Inter 400 | 9 | 1.3% | 24 |
+| Caption | Inter 400 | 10 ⬆ | 1.4% | 27 |
 
-*was: v1 gave body as 14–18 **px**, which is roughly 9 pt on a slide. Unreadable from row four. Body is 14 **pt**.*
+**⬆ marks a deliberate step up from the template.** The 2026 Slides template sets body and list items at 14 pt. That is legible on a laptop and too small from the back of a session room, so this kit specifies **18 pt** and lifts the supporting sizes with it. Everything above body — titles, statements, stats — matches the template exactly.
+
+If you are filling in the Google Slides template by hand rather than generating slides, bumping body text from 14 to 18 pt is the single highest-value change you can make.
+
+*was: v1 gave body as 14–18 **px**, which is roughly 9 pt on a slide. Unreadable from row four.*
+
+**Give 18 pt text room.** A list or body column set at 18 pt needs roughly **64–76 em** of measure (about 1,000–1,200 px at 1920) to avoid wrapping every line. Measures tuned for 14 pt will break the moment you scale the type up.
 
 Line spacing **100** for headings and tight blocks, **115** for running body. Align **left**. Center only on a quote, a centered section title, or a symmetric diagram.
 
@@ -228,7 +234,9 @@ Everything decorative in this system is **printed halftone**: a dot grid whose d
 - The title slide carries a small **trio** under the subtitle: solid orange quarter round, cyan halftone square, solid grey circle, each about 0.26 in.
 - The speaker headshot on a title slide sits on a **cyan to yellow halftone square**, with the portrait cut out on top.
 
-**Do not** draw new geometry, use stock illustration, use icons as decoration, or add drop shadows. If your agent cannot reproduce the halftone, generate it: a dot grid with a linear radius ramp and a gradient fill is a dozen lines of SVG, and it scales better than a bitmap.
+**The real artwork ships with this kit**, extracted from the official template and resized to the dimensions the slides actually use — see `art/`. Use those files rather than approximating them. The template's halftone is a genuine rotated two-colour print screen (red dots over a yellow ground, offset at an angle); a flat one-colour orthogonal dot grid reads as an imitation next to it.
+
+**Do not** draw new geometry, use stock illustration, use icons as decoration, or add drop shadows. `art/halftone.py` remains in the kit as a fallback that generates approximate shapes as SVG, for cases where you cannot ship ~1.4 MB of raster art.
 
 *was: v1 said both "modular block shapes carry the personality" and "no shapes anywhere." Resolved: halftone is the shape language, it is strictly positional, and it never touches the type.*
 

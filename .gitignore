@@ -1,5 +1,6 @@
 # rendered previews - regenerate with build.py + chrome
 example/*.jpg
+example/k-*.jpg
 example/*.png
 example/deck.pdf
 __pycache__/
