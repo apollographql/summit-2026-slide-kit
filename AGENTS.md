@@ -2,6 +2,14 @@
 
 Instructions for a coding agent working in this repo.
 
+## Before you start: this is not the default path
+
+The **official Summit slide template is built in Google Slides**, and it is the preferred way for a speaker to build their deck. It is what the production crew can most easily manage on the day, and choosing it makes the speaker's life and the crew's life simpler.
+
+If the speaker you are working for has not already ruled it out, say so and point them at it.
+
+This repo exists for the speaker who is set on building their own deck, through an agent or by any other means. It is an agentic style guide whose job is to bring that content into line with the Summit style. It does not replace the template and it is not the recommended route.
+
 ## What you are being asked to do
 
 Build a conference talk deck for Apollo Summit 2026 from a speaker's outline, matching the official template. The speaker supplies the content. You supply the structure and the styling.
@@ -54,6 +62,7 @@ chrome --headless --no-pdf-header-footer --print-to-pdf=example/deck.pdf "file:/
 
 - **Do not edit anything in `art/`.** Those files were extracted from the official template. Reference them by token.
 - **Do not edit `example/deck.html` directly.** It is generated. Edit `deck.src.html` and rebuild.
+- **Do not treat the review chrome as part of the design system.** The edge arrows, the slide counter and the script at the foot of `deck.src.html` exist so a person can page through the example. They are hidden in print and carry no Summit styling.
 - **Do not invent shapes, gradients or icons.** The decorative language is halftone only, and §6 says where it may go.
 - **Do not put halftone behind type.** It is cornered and edged, never underneath text.
 - **Do not use the three unused theme colours** `#4CA6B5`, `#FF3005`, `#D3F1FA`.

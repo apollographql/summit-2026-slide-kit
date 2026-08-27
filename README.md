@@ -34,6 +34,8 @@ chrome --headless --no-pdf-header-footer --print-to-pdf=example/deck.pdf "file:/
 
 The page is built at 1920×1080 with everything sized in `em` off a single root, so it scales to any width without reflowing. Print CSS pins it to exact 16:9 pages.
 
+Move the pointer over the page and arrows appear at the left and right edges, with a slide counter bottom right. Arrow keys, space, page up and page down, home and end all move between slides. This chrome is for reviewing and is hidden when you print.
+
 ## The halftone
 
 The decorative language of Summit 2026 is **printed halftone**: a rotated two-colour dot screen, used as squares, circles, quarter-rounds and a full-bleed band.
