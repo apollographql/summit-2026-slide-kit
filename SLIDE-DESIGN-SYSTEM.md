@@ -135,7 +135,7 @@ Sizes in points are what you type into Google Slides. The percentage is of canva
 | **Slide title** | Inter 400 | **24** | 3.3% | 64 |
 | Image caption | Inter 400 | 21 | 2.9% | 56 |
 | Talk subtitle | Inter 400 | 18 | 2.5% | 48 |
-| **Body, list item** | Inter 400 | **18** ⬆ | 2.5% | 48 |
+| **Body, list item** | Inter 400 | **16** ⬆ | 2.2% | 43 |
 | Speaker name | Inter **700** | 14 | 1.9% | 37 |
 | Card heading | Inter **700** | 14 ⬆ | 1.9% | 37 |
 | Stat label | Inter **700** | 12 ⬆ | 1.7% | 32 |
@@ -145,13 +145,13 @@ Sizes in points are what you type into Google Slides. The percentage is of canva
 | Code | **Fira Code** 400 | 10–12 | 1.4–1.7% | 27–32 |
 | Caption | Inter 400 | 10 ⬆ | 1.4% | 27 |
 
-**⬆ marks a deliberate step up from the template.** The 2026 Slides template sets body and list items at 14 pt. That is legible on a laptop and too small from the back of a session room, so this kit specifies **18 pt** and lifts the supporting sizes with it. Everything above body — titles, statements, stats — matches the template exactly.
+**⬆ marks a deliberate step up from the template.** The 2026 Slides template sets body and list items at 14 pt. That is legible on a laptop and too small from the back of a session room, so this kit specifies **16 pt** and lifts the supporting sizes with it. Everything above body — titles, statements, stats — matches the template exactly.
 
-If you are filling in the Google Slides template by hand rather than generating slides, bumping body text from 14 to 18 pt is the single highest-value change you can make.
+If you are filling in the Google Slides template by hand rather than generating slides, bumping body text from 14 to 16 pt is the single highest-value change you can make.
 
 *was: v1 gave body as 14–18 **px**, which is roughly 9 pt on a slide. Unreadable from row four.*
 
-**Give 18 pt text room.** A list or body column set at 18 pt needs roughly **64–76 em** of measure (about 1,000–1,200 px at 1920) to avoid wrapping every line. Measures tuned for 14 pt will break the moment you scale the type up.
+**Give 16 pt text room.** A list or body column set at 16 pt needs roughly **64–76 em** of measure (about 1,000–1,200 px at 1920) to avoid wrapping every line. Measures tuned for 14 pt will break the moment you scale the type up.
 
 Line spacing **100** for headings and tight blocks, **115** for running body. Align **left**. Center only on a quote, a centered section title, or a symmetric diagram.
 
@@ -327,4 +327,3 @@ That is a rule, not drift. **Follow the sequence.**
 
 1. **A closing slide.** The template ends on Resources with no thank-you or Q&A page. The **2025** template did carry one, with the speaker note *"Standard Outtro slide, please end your deck with this slide."* Since 2026 has no formal per-session Q&A and instead sends the audience to the stage front or the Apollo lounge, the last slide is what stays on screen while people decide whether to come and talk. That argues for adding one back rather than dropping it. The example deck merges the closing statement and resources onto one page as a stopgap. **Design decision needed.**
 
-2. **The 18 pt body size.** This kit deliberately departs from the template's 14 pt (see §4). The call was made on room legibility. **Worth a designer sign-off**, and if it stands, worth pushing back into the Slides template so both paths agree.
